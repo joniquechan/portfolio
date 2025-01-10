@@ -1,0 +1,147 @@
+:root {
+    --bg-color: #0a192f;
+    --text-color: #e6f1ff;
+    --accent-color: #64ffda;
+    --secondary-color: #8892b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+#intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.skill {
+    background-color: rgba(100, 255, 218, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.project {
+    background-color: rgba(100, 255, 218, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    margin: 0.5rem 0;
+}
+
+.tech-stack span {
+    background-color: rgba(100, 255, 218, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.skills-grid {
+    margin: 0.5rem 0;
+}
+
+.skill {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    #intro h1 {
+        font-size: 2rem;
+    }
+}
