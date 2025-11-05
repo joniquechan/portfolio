@@ -87,7 +87,7 @@ const Skills = () => {
               backgroundColor: "rgba(100, 255, 218, 0.2)",
             }}
             dangerouslySetInnerHTML={{
-              __html: concept.includes("Data") ? "Data<br>Science" : concept,
+              __html: concept === "Data Science" ? "Data<br>Science" : concept,
             }}
           />
         ))}
